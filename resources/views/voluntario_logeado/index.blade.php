@@ -26,7 +26,7 @@
                             @if($voluntario && $voluntario->imagenPerfil)
                             <img src="{{ $voluntario->imagenPerfil->IMG_path }}" class="card-img-top" alt="Imagen de perfil del voluntario">
                         @else
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23999' d='M224 256c70.7 0 128-57.3'" class="card-img-top" alt="Imagen de perfil del voluntario">
+                            <img src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" class="card-img-top" alt="Imagen de perfil del voluntario">
                         @endif
 
                         </div>

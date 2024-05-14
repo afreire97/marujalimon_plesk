@@ -8,6 +8,7 @@ use App\Models\ImagenPerfil;
 use App\Models\Voluntario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class VoluntarioLogeadoController extends Controller
@@ -21,7 +22,11 @@ class VoluntarioLogeadoController extends Controller
         $user = Auth::user();
 
 
+
         $voluntario = $user->voluntario;
+
+
+
 
 
         return view('voluntario_logeado.index', ['voluntario' => $voluntario]);

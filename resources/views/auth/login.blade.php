@@ -31,7 +31,7 @@
                 <div class="brand">
                     <div class="d-flex align-items-center">
                         <span class="logo"></span>
-                        <b>Color</b> Admin
+                        <b>Maruja</b> Limon
                     </div>
                     <small>Bootstrap 5 Responsive Admin Template</small>
                 </div>
@@ -74,7 +74,7 @@
                             Recordarme
                         </label>
                     </div>
-{{-- 
+{{--
                     @if (Route::has('password.request'))
                         <a href="{{ route('password.request') }}" class="text-primary">¿Olvidaste tu contraseña?</a>
                     @endif --}}
