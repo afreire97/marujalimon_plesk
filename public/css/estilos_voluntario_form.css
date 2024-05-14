@@ -1,0 +1,1122 @@
+:root {
+    /* Colores predeterminados */
+    --color-primary: #008080; /* Azul predeterminado */
+    --color-primary-dark: #027272; /* Azul oscuro predeterminado */
+    --border-focus: #80bdff; /* Color de borde al enfocar */
+    --box-shadow-focus: rgba(0, 123, 255, 0.25); /* Sombra de caja al enfocar */
+    --btn-bg-secondary: #6c757d; /* Fondo de botón secundario */
+    --btn-border-secondary: #6c757d; /* Borde de botón secundario */
+}
+
+/* Clases de tema específico */
+.card-header {
+    background-color: #008080;
+}
+
+.theme-red {
+    --color-primary: #dc3e32; /* Rojo */
+    --color-primary-dark: #d32f2f; /* Rojo oscuro */
+    --border-focus: #f44336;
+    --box-shadow-focus: rgba(244, 67, 54, 0.25);
+}
+
+.theme-pink {
+    --color-primary: #e91e63; /* Rosa */
+    --color-primary-dark: #c2185b; /* Rosa oscuro */
+    --border-focus: #e91e63;
+    --box-shadow-focus: rgba(233, 30, 99, 0.25);
+}
+
+.theme-orange {
+    --color-primary: #ff9800; /* Naranja */
+    --color-primary-dark: #f57c00; /* Naranja oscuro */
+    --border-focus: #ff9800;
+    --box-shadow-focus: rgba(255, 152, 0, 0.25);
+}
+
+.theme-yellow {
+    --color-primary: #edda33; /* Amarillo */
+    --color-primary-dark: #fbc02d; /* Amarillo oscuro */
+    --border-focus: #ffeb3b;
+    --box-shadow-focus: rgba(255, 235, 59, 0.25);
+}
+
+.theme-lime {
+    --color-primary: #cddc39; /* Lima */
+    --color-primary-dark: #afb42b; /* Lima oscuro */
+    --border-focus: #cddc39;
+    --box-shadow-focus: rgba(205, 220, 57, 0.25);
+}
+
+.theme-green {
+    --color-primary: #4caf50; /* Verde */
+    --color-primary-dark: #388e3c; /* Verde oscuro */
+    --border-focus: #4caf50;
+    --box-shadow-focus: rgba(76, 175, 80, 0.25);
+}
+
+.theme-aqua {
+    --color-primary: #05b4cb; /* Aqua */
+    --color-primary-dark: #0097a7; /* Aqua oscuro */
+    --border-focus: #00bcd4;
+    --box-shadow-focus: rgba(0, 188, 212, 0.25);
+}
+
+.theme-blue {
+    --color-primary: #2196f3; /* Azul */
+    --color-primary-dark: #1976d2; /* Azul oscuro */
+    --border-focus: #2196f3;
+    --box-shadow-focus: rgba(33, 150, 243, 0.25);
+}
+
+.theme-purple {
+    --color-primary: #3f51b5; /* Índigo */
+    --color-primary-dark: #303f9f; /* Índigo oscuro */
+    --border-focus: #3f51b5;
+    --box-shadow-focus: rgba(63, 81, 181, 0.25);
+
+}
+
+.theme-indigo {
+    --color-primary: #9c27b0; /* Morado */
+    --color-primary-dark: #7b1fa2; /* Morado oscuro */
+    --border-focus: #9c27b0;
+    --box-shadow-focus: rgba(156, 39, 176, 0.25);
+}
+
+.theme-grey {
+    --color-primary: #607d8b; /* Gris */
+    --color-primary-dark: #455a64; /* Gris oscuro */
+    --border-focus: #607d8b;
+    --box-shadow-focus: rgba(96, 125, 139, 0.25);
+}
+
+
+.container {
+    max-width: 1200px; /* Ajusta según tus necesidades */
+    margin: auto;
+}
+
+body {
+    margin-top: 100px;
+    margin: 100px 70px 100px 70px;
+}
+
+.card {
+    border-radius: 0.25rem;
+}
+
+
+.card-body, .card-footer {
+    padding: 2rem;
+}
+
+.form-control, .form-select {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 0.2rem var(--box-shadow-focus);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary-dark);
+    padding: 10px 20px;
+    font-size: 1.25rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--btn-bg-secondary);
+    border-color: var(--btn-border-secondary);
+    padding: 10px 20px;
+    font-size: 1.25rem;
+}
+
+.btn {
+    border-radius: 0.25rem;
+    margin: 0 0.25rem;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.shipping-policy {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+.shipping-policy h5 {
+    margin-bottom: 0.5rem;
+}
+
+.shipping-policy ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.shipping-policy ul li::before {
+    content: '• ';
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .card-footer {
+        flex-direction: column-reverse;
+        padding: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+.theme-red .card-header, .theme-red.bg-primary {
+    background-color: var(--color-primary); /* Rojo */
+}
+
+.theme-purple .card-header, .theme-purple.bg-primary {
+    background-color: var(--color-primary); /* Morado */
+}
+
+.theme-aqua .card-header, .theme-aqua.bg-primary {
+    background-color: var(--color-primary); /* Aqua */
+}
+
+.theme-blue .card-header, .theme-blue.bg-primary {
+    background-color: var(--color-primary); /* Azul */
+}
+
+.theme-green .card-header, .theme-green.bg-primary {
+    background-color: var(--color-primary); /* Verde */
+}
+
+.theme-indigo .card-header, .theme-indigo.bg-primary {
+    background-color: var(--color-primary); /* Índigo */
+}
+
+.theme-lime .card-header, .theme-lime.bg-primary {
+    background-color: var(--color-primary); /* Lima */
+}
+
+.theme-orange .card-header, .theme-orange.bg-primary {
+    background-color: var(--color-primary); /* Naranja */
+}
+
+.theme-pink .card-header, .theme-pink.bg-primary {
+    background-color: var(--color-primary); /* Rosa */
+}
+
+.theme-yellow .card-header, .theme-yellow.bg-primary {
+    background-color: var(--color-primary); /* Amarillo */
+}
+
+.theme-grey .card-header, .theme-grey.bg-primary {
+    background-color: var(--color-primary); /* Gris */
+}
+
+
+
+
+.pagination {
+    font-size: 14px; /* Tamaño de fuente */
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    padding: 6px 12px; /* Ajusta el espaciado interior */
+}
+
+.pagination > .active > a {
+    background-color: #3490dc; /* Color de fondo para la página activa */
+    border-color: #3490dc; /* Color del borde para la página activa */
+}
+
+.swal-confirm-btn {
+    margin-right: 65px; /* Aumenta la separación a la derecha */
+}
+
+/* Estilos para el botón de cancelar */
+.swal-cancel-btn {
+    margin-left: 65px; /* Aumenta la separación a la izquierda */
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la transición de la transformación y la sombra */
+}
+
+.card:hover {
+    transform: translateY(-12px); /* Levanta la tarjeta */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Aumenta la sombra para dar efecto de elevación */
+}
+
+.btn-margin-right {
+    margin-right: 12px; /* Ajusta el margen a tu preferencia */
+}
+
+/* Estilo para la tarjeta */
+.card {
+    display: flex; /* Nuevo */
+    flex-direction: column; /* Nuevo */
+    height: 100%; /* Establece una altura si aún no la tiene */
+  }
+
+  /* Estilo para la imagen */
+  .card-img-top {
+    width: 100%; /* Asegúrate de que la imagen no exceda la anchura de la tarjeta */
+    flex-grow: 15; /* Nuevo: permite que la imagen crezca */
+  }
+
+  /* Estilo para el cuerpo de la tarjeta */
+  .card-body {
+    margin-top: auto; /* Nuevo: empuja el contenido hacia abajo */
+  }
+
+
+  .pulse {
+    animation: pulseAnimation 2s infinite;
+  }
+
+  @keyframes pulseAnimation {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+  }
+  @keyframes lavaLamp {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes deployRhombuses {
+    0% {
+        transform: translateY(-100%) rotate(45deg) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-50%) rotate(45deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) rotate(45deg) scale(1);
+        opacity: 1;
+    }
+}
+
+.bg-lava-lamp {
+    background: linear-gradient(270deg,
+                                #f8f9fa,
+                                #f1f3f5,
+                                #f8f9fa,
+                                #f1f3f5,
+                                #f8f9fa);
+    background-size: 200% 200%;
+    animation: lavaLamp 10s ease infinite;
+}
+.col-lg-12.text-center {
+    overflow: hidden; /* Esto evita que el fondo se salga de los límites del div */
+}
+
+
+
+
+.header-content {
+    position: relative;
+    z-index: 1; /* Ensure the text appears above the background */
+}
+
+
+header {
+    position: relative; /* Esto hace que sea el contenedor de referencia para los rombos */
+    background-color: #f8f9fa;
+    padding: 5rem 0; /* Ajusta el padding según sea necesario para dar espacio a los rombos */
+    margin-bottom: 4rem;
+    overflow: hidden; /* Esto asegurará que cualquier cosa fuera del header no se muestre */
+}
+
+.rhombus-container {
+    position: absolute;
+    top: 50%; /* Esto centrará los rombos verticalmente en el header */
+    transform: translateY(-50%); /* Asegura que se centren perfectamente */
+    z-index: 1; /* Esto debería estar por encima del fondo, pero debajo del texto */
+}
+
+.left-rhombuses {
+    left: 0; /* Alinea los rombos a la izquierda */
+    transform: translateY(-50%) translateX(-50%); /* Ajusta la posición horizontal si es necesario */
+}
+
+.right-rhombuses {
+    right: 0; /* Alinea los rombos a la derecha */
+    transform: translateY(-50%) translateX(50%); /* Ajusta la posición horizontal si es necesario */
+}
+
+.rhombus:nth-child(1) {
+    width: 75px;
+    height: 75px;
+    background-color: #4db8b8;
+    transform: translateY(-100%) rotate(45deg) scale(0);
+    opacity: 0;
+    animation: deployRhombuses 1.5s ease forwards;
+}
+.rhombus:nth-child(2) {
+    width: 75px;
+    height: 75px;
+    background-color: #008080;
+    transform: translateY(-100%) rotate(45deg) scale(0);
+    opacity: 0;
+    animation: deployRhombuses 1.5s ease forwards;
+}
+.rhombus:nth-child(3) {
+    width: 75px;
+    height: 75px;
+    background-color: #006666;
+    transform: translateY(-100%) rotate(45deg) scale(0);
+    opacity: 0;
+    animation: deployRhombuses 1.5s ease forwards;
+}
+
+.theme-red .rhombus:nth-child(1) {
+    background-color: #f88c8c;/* Rojo claro */
+}
+
+.theme-red .rhombus:nth-child(2) {
+    background-color: #f33737; /* Rojo */
+}
+
+.theme-red .rhombus:nth-child(3) {
+    background-color: #580505; /* Rojo oscuro */
+}
+
+
+
+.theme-pink .rhombus:nth-child(1), .theme-pink.bg-primary {
+    background-color: #fcb2be; /* Rosa claro */
+}
+
+.theme-pink .rhombus:nth-child(2) {
+    background-color: #ff69b4; /* Rosa */
+}
+
+.theme-pink .rhombus:nth-child(3) {
+    background-color: #c71585; /* Rosa oscuro */
+}
+
+
+/* Tema Aqua */
+.theme-aqua .rhombus:nth-child(1), .theme-aqua.bg-primary {
+    background-color: #7fffd4; /* Aqua claro */
+}
+
+.theme-aqua .rhombus:nth-child(2) {
+    background-color: #5fbfbf; /* Aqua */
+}
+
+.theme-aqua .rhombus:nth-child(3) {
+    background-color: #417878; /* Aqua oscuro */
+}
+
+/* Tema Azul */
+.theme-blue .rhombus:nth-child(1), .theme-blue.bg-primary {
+    background-color: #89cff0; /* Azul claro */
+}
+
+.theme-blue .rhombus:nth-child(2) {
+    background-color: #0000ff; /* Azul */
+}
+
+.theme-blue .rhombus:nth-child(3) {
+    background-color: #00008b; /* Azul oscuro */
+}
+
+/* Tema Verde */
+.theme-green .rhombus:nth-child(1), .theme-green.bg-primary {
+    background-color: #98fb98; /* Verde claro */
+}
+
+.theme-green .rhombus:nth-child(2) {
+    background-color: #008000; /* Verde */
+}
+
+.theme-green .rhombus:nth-child(3) {
+    background-color: #004d00; /* Verde oscuro */
+}
+
+/* Tema Índigo */
+.theme-indigo .rhombus:nth-child(1), .theme-indigo.bg-primary {
+    background-color: #b3b3ff; /* Índigo claro */
+}
+
+.theme-indigo .rhombus:nth-child(2) {
+    background-color: #4b0082; /* Índigo */
+}
+
+.theme-indigo .rhombus:nth-child(3) {
+    background-color: #300059; /* Índigo oscuro */
+}
+
+/* Tema Lima */
+.theme-lime .rhombus:nth-child(1), .theme-lime.bg-primary {
+    background-color: #e6f0a3; /* Lima claro */
+}
+
+.theme-lime .rhombus:nth-child(2) {
+    background-color: #cddc39; /* Lima */
+}
+
+.theme-lime .rhombus:nth-child(3) {
+    background-color: #99aa00; /* Lima oscuro */
+}
+
+/* Tema Naranja */
+.theme-orange .rhombus:nth-child(1), .theme-orange.bg-primary {
+    background-color: #ffdab9; /* Naranja claro */
+}
+
+.theme-orange .rhombus:nth-child(2) {
+    background-color: #ff8c00; /* Naranja */
+}
+
+.theme-orange .rhombus:nth-child(3) {
+    background-color: #ff4500; /* Naranja oscuro */
+}
+
+/* Tema Morado */
+.theme-purple .rhombus:nth-child(1), .theme-purple.bg-primary {
+    background-color: #e6e6fa; /* Morado claro */
+}
+
+.theme-purple .rhombus:nth-child(2) {
+    background-color: #800080; /* Morado */
+}
+
+.theme-purple .rhombus:nth-child(3) {
+    background-color: #4b0082; /* Morado oscuro */
+}
+
+/* Tema Amarillo */
+.theme-yellow .rhombus:nth-child(1), .theme-yellow.bg-primary {
+    background-color: #ffffe0; /* Amarillo claro */
+}
+
+.theme-yellow .rhombus:nth-child(2) {
+    background-color: #ffff00; /* Amarillo */
+}
+
+.theme-yellow .rhombus:nth-child(3) {
+    background-color: #ffdf00; /* Amarillo oscuro */
+}
+
+/* Tema Gris */
+.theme-grey .rhombus:nth-child(1), .theme-grey.bg-primary {
+    background-color: #d3d3d3; /* Gris claro */
+}
+
+.theme-grey .rhombus:nth-child(2) {
+    background-color: #a9a9a9; /* Gris */
+}
+
+.theme-grey .rhombus:nth-child(3) {
+    background-color: #808080; /* Gris oscuro */
+}
+
+
+#welcomeMessage {
+    text-shadow:
+        -1px 0 rgba(0, 0, 0, 0.4),
+        0 1px rgba(0, 0, 0, 0.4),
+        1px 0 rgba(0, 0, 0, 0.4),
+        0 -1px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+.rhombus:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.rhombus:nth-child(2) {
+    animation-delay: 1s;
+
+}
+
+.rhombus:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+
+.header-content {
+    position: relative;
+    z-index: 1; /* Ensures the text appears above the rhombuses */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.typewriter p {
+    font-family: 'Satisfy', cursive; /* Fuente Satisfy */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden; /* Esconde el texto hasta que la animación lo revele */
+    animation: typing 5s steps(72, end) 4s forwards; /* Empieza la animación tras 4 segundos */
+    max-width: 100%; /* Asegura que el párrafo no sea más ancho que su contenedor */
+}
+
+/* Efecto de entrada para el párrafo con un delay de 4s */
+.typewriter {
+    opacity: 0;
+    animation: fadeIn 1s ease 4s forwards; /* El fadeIn se retrasa para que comience junto con la animación de escritura */
+}
+
+/* Animación para el efecto de "fadeIn" */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.bg-light-gray {
+    background: radial-gradient(circle, #f8f9fa 70%, transparent 90%);
+    /* Asegúrate de que el color #f8f9fa coincida con el color de fondo de tu sitio */
+}
+
+
+.header-content {
+    padding-left: 75px;  /* Eliminar el padding a la izquierda */
+    padding-right: 75px; /* Eliminar el padding a la derecha */
+  }
+  /* Si necesitas ajustar márgenes o padding del encabezado */
+  .header {
+    margin: 0;  /* Ajustar los márgenes externos si son necesarios */
+    padding: 0; /* Ajustar el padding si es necesario */
+  }
+  .header {
+    z-index: 1; /* Lower z-index means it will be behind elements with a higher z-index */
+    position: relative; /* z-index works on positioned elements */
+    /* ... other styles ... */
+}
+#header {
+    position: fixed; /* Fixed position to keep it at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* Bootstrap often uses 1030 for navbars, but adjust as needed */
+    /* Other styles... */
+}
+p#fixedColorText {
+    color: #767676; /* Este es un color de gris medio que debería ser visible en fondos claros y oscuros */
+}
+
+.theme-red .text-custom-primary{
+    color: var(--color-primary); /* Rojo */
+}
+
+.theme-pink .text-custom-primary {
+    color: var(--color-primary); /* Rosa */
+}
+
+.theme-yellow .text-custom-primary {
+    color: var(--color-primary); /* Amarillo */
+}
+
+.theme-grey .text-custom-primary{
+    color: var(--color-primary); /* Gris */
+}
+
+.theme-aqua .text-custom-primary {
+    color: var(--color-primary); /* Aqua */
+}
+
+.theme-blue .text-custom-primary {
+    color: var(--color-primary); /* Azul */
+}
+
+.theme-green .text-custom-primary {
+    color: var(--color-primary); /* Verde */
+}
+
+.theme-indigo .text-custom-primary {
+    color: var(--color-primary); /* Índigo */
+}
+
+.theme-lime .text-custom-primary {
+    color: var(--color-primary); /* Lima */
+}
+
+.theme-orange .text-custom-primary {
+    color: var(--color-primary); /* Naranja */
+}
+
+.theme-purple .text-custom-primary {
+    color: var(--color-primary); /* Morado */
+}
+
+.theme-orange .btn-outline-custom-primary {
+    color: var(--color-primary); /* Naranja */
+    border-color: var(--color-primary); /* Naranja */
+}
+
+.theme-red .btn-outline-custom-primary {
+    color: var(--color-primary); /* Rojo */
+    border-color: var(--color-primary); /* Rojo */
+}
+
+.theme-pink .btn-outline-custom-primary {
+    color: var(--color-primary); /* Rosa */
+    border-color: var(--color-primary); /* Rosa */
+}
+
+.theme-yellow .btn-outline-custom-primary {
+    color: var(--color-primary); /* Amarillo */
+    border-color: var(--color-primary); /* Amarillo */
+}
+
+.theme-grey .btn-outline-custom-primary {
+    color: var(--color-primary); /* Gris */
+    border-color: var(--color-primary); /* Gris */
+}
+
+.theme-aqua .btn-outline-custom-primary {
+    color: var(--color-primary); /* Aqua */
+    border-color: var(--color-primary); /* Aqua */
+}
+
+.theme-blue .btn-outline-custom-primary {
+    color: var(--color-primary); /* Azul */
+    border-color: var(--color-primary); /* Azul */
+}
+
+.theme-green .btn-outline-custom-primary {
+    color: var(--color-primary); /* Verde */
+    border-color: var(--color-primary); /* Verde */
+}
+
+.theme-indigo .btn-outline-custom-primary {
+    color: var(--color-primary); /* Índigo */
+    border-color: var(--color-primary); /* Índigo */
+}
+
+.theme-lime .btn-outline-custom-primary {
+    color: var(--color-primary); /* Lima */
+    border-color: var(--color-primary); /* Lima */
+}
+
+.theme-purple .btn-outline-custom-primary {
+    color: var(--color-primary); /* Morado */
+    border-color: var(--color-primary); /* Morado */
+}/* Agrega esto a tu archivo CSS */
+#year-form {
+    max-width: 300px; /* Ajusta al ancho que prefieras */
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave para resaltar el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    background: #fff; /* Fondo blanco o el color de fondo de tu preferencia */
+}
+
+#year-form label {
+    display: block;
+    margin-bottom: 8px; /* Espaciado entre la etiqueta y el select */
+    font-weight: bold;
+}
+
+#year-form select {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px;
+    margin-bottom: 12px; /* Espaciado antes del botón */
+    border-radius: 4px;
+    border: 1px solid #ccc; /* Borde sutil */
+}
+
+#year-form button {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff; /* Color primario, elige uno que se ajuste a tu diseño */
+    color: white;
+    cursor: pointer; /* Cursor tipo pointer para indicar que es clickeable */
+    transition: background-color 0.3s; /* Transición suave de color */
+}
+
+#year-form button:hover {
+    background-color: #0056b3; /* Oscurece el botón al pasar el mouse por encima */
+}
+
+.card-body {
+    border-radius: 4px; /* Bordes redondeados para la tarjeta */
+
+}
+
+.card-body:hover {
+
+    border-radius: 4px; /* Bordes redondeados para la tarjeta */
+}
+
+
+/* Agrega esto a tu archivo CSS */
+.gradient-background {
+    background: radial-gradient(circle, #f4f4f4, transparent);
+    padding: 20px;
+    border-radius: 15px; /* Agrega bordes redondeados si deseas */
+}
+
+    #form-container {
+        max-width: 600px;
+        margin: auto;
+        transition: transform 0.3s;
+    }
+    #form-container:hover {
+        transform: translateY(-12px);
+    }
+    #delayed-container {
+        display: block; /* Mantiene el espacio reservado, evitando saltos de contenido */
+        opacity: 0;
+        transition: opacity 2s ease; /* Ajusta la duración según desees */
+        visibility: hidden; /* Oculta inicialmente el contenido */
+    }
+    #chart-container {
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+    }
+
+    @media (min-width: 1200px) {
+        .col-custom {
+            flex: 0 0 auto;
+            width: 12.5%;
+        }
+    }
+
+    .volunteer-card-img {
+        max-height: 150px; /* Adjust as needed */
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .volunteer-card-title, .volunteer-card-text {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .volunteer-card-body {
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%; /* This ensures the footer aligns at the bottom */
+    }
+
+    .volunteer-card-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.5rem;
+    }
+
+    .volunteer-btn-primary {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+    }
+    .col-custom {
+        padding-right: 8px; /* Right margin of each card */
+        padding-left: 8px; /* Left margin of each card */
+    }
+
+    #cardView {
+        margin-right: -8px; /* Negate right margin of the rightmost card */
+        margin-left: -8px; /* Negate left margin of the leftmost card */
+    }
+
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #addNuevaTarea, #addHoursForm {
+        display: none;
+    }
+
+    /* Estilos para botones de voluntarios */
+    .volunteer-info, .volunteer-modify{
+        flex: 1 0 48%; /* flex-grow, flex-shrink, flex-basis */
+        margin: 4px; /* Ajuste para margen uniforme */
+        padding: 8px 12px; /* Padding para un tamaño uniforme */
+        text-align: center; /* Centrado del texto */
+        font-size: 10px; /* Tamaño de fuente uniforme */
+        border: none; /* Sin bordes */
+        color: white; /* Color del texto */
+        display: block; /* Hace que el botón ocupe el espacio asignado completamente */
+        box-sizing: border-box; /* Incluye el padding y el borde en el ancho y altura del elemento */
+        height: 40px; /* Altura fija para todos los botones */
+    }
+
+    .volunteer-card-buttons, .coordinator-card-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; /* Ocupar todo el ancho del contenedor */
+    }
+
+    .volunteer-info, .volunteer-modify {
+    flex: 1 0 48%; /* flex-grow, flex-shrink, flex-basis */
+    margin: 4px; /* Ajuste para margen uniforme */
+    padding: 8px 12px; /* Padding para un tamaño uniforme */
+    text-align: center; /* Centrado del texto */
+    font-size: 10px; /* Tamaño de fuente uniforme */
+    border: none; /* Sin bordes */
+    color: white; /* Color del texto */
+    display: block; /* Hace que el botón ocupe el espacio asignado completamente */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y altura del elemento */
+    height: 40px; /* Altura fija para todos los botones */
+}
+
+.volunteer-card-buttons, .coordinator-card-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+}
+
+.coordinator-info, .coordinator-modify{
+    flex: 1 0 48%; /* flex-grow, flex-shrink, flex-basis */
+    margin: 4px; /* Ajuste para margen uniforme */
+    padding: 8px 12px; /* Padding para un tamaño uniforme */
+    text-align: center; /* Centrado del texto */
+    font-size: 10px; /* Tamaño de fuente uniforme */
+    border: none; /* Sin bordes */
+    color: white; /* Color del texto */
+    display: block; /* Hace que el botón ocupe el espacio asignado completamente */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y altura del elemento */
+    height: 40px; /* Altura fija para todos los botones */
+}
+
+    .card-coordinador {
+    border: 2px solid #919992 !important; /* Forzar el borde verde */
+}
+    .mode-container {
+        display: flex;
+        align-items: center; /* Asegura que los elementos estén verticalmente alineados */
+        padding: 5px 10px; /* Añade un poco de padding alrededor de los elementos */
+        background-color: #f8f9fa; /* Color de fondo claro para el contenedor */
+        border: 1px solid #dee2e6; /* Borde sutil para el contenedor */
+        border-radius: 5px; /* Bordes redondeados para suavizar los bordes */
+    }
+
+    #modeDisplay {
+        margin-right: 10px; /* Espacio entre el texto del modo y el botón */
+        font-weight: bold; /* Hace el texto un poco más grueso */
+        color: #333; /* Color oscuro para el texto para mejor legibilidad */
+    }
+
+    #toggleViewButton {
+        white-space: nowrap; /* Asegura que el texto del botón no se envuelva */
+    }
+    .button-container .btn {
+        padding: .375rem .75rem;  /* Establece un padding uniforme */
+        font-size: 1rem;          /* Establece un tamaño de fuente uniforme */
+        line-height: 1.5;         /* Line-height para mantener el contenido centrado */
+        border-radius: .25rem;    /* Border-radius para los bordes redondeados */
+        margin-right: 10px;       /* Espacio entre los botones */
+    }
+
+    #demoButton {
+        background-color: #40bdee;  /* Azul celeste para el fondo */
+        color: white;               /* Blanco para el texto, para contraste */
+        border: none;               /* Opcional: elimina el borde si está presente */
+    }
+
+    #demoButton:hover, #demoButton:focus {
+        background-color: #106292;  /* Un azul un poco más oscuro para el estado hover y focus */
+        color: white;
+    }
+
+
+    .card .custom-btn {
+        font-size: 16px; /* Tamaño de letra uniforme */
+        border-radius: 20px; /* Bordes redondeados */
+        padding: 10px 20px; /* Espaciado interno adecuado */
+        margin: 5px; /* Margen uniforme */
+        width: 100%; /* Ocupar todo el ancho posible dentro de la tarjeta */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil */
+        transition: background-color 0.3s, color 0.3s; /* Transición suave para efectos de hover */
+        background-color: #17a2b8; /* Color primario para acciones principales */
+        color: #ffffff;
+    }
+
+    .card .custom-btn:hover {
+        background-color: rgb(18, 144, 216); /* Color al pasar el mouse */
+    }
+
+    .btn-custom {
+        font-size: 14px; /* Tamaño de letra mayor para mejor lectura */
+        border-radius: 25px; /* Bordes más redondeados */
+        padding: 12px 24px; /* Mayor padding para un botón más grande */
+        margin-bottom: 10px; /* Espaciado uniforme entre botones */
+        width: 100%; /* Aprovechar el ancho completo del contenedor */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Sombra más pronunciada para un aspecto elevado */
+        background-color: #17a2b8; /* Un color de fondo coherente con el diseño global */
+        color: white; /* Texto blanco para contraste */
+        transition: background-color 0.3s; /* Transición suave al cambiar de color */
+    }
+
+    .btn-custom:hover {
+        background-color: #138496; /* Cambio de color al pasar el mouse para interactividad */
+    }
+    .lista-sugerencias {
+        position: absolute;
+        background: white;
+        width: 100%;
+        border: 1px solid #ccc;
+        z-index: 1000;
+        max-height: 200px;
+        overflow-y: auto;
+        display: none; /* Este estilo se cambiará dinámicamente con JavaScript */
+    }
+
+    .opcion-tarea {
+        padding: 8px 10px;
+        cursor: pointer;
+    }
+
+    .opcion-tarea:hover {
+        background-color: #f8f8f8;
+    }
+
+    .lista-sugerencias {
+        position: absolute;
+        background: white;
+        width: calc(100% - 30px);
+        border: 1px solid #ccc;
+        border-top: none;
+        z-index: 1000;
+        max-height: 200px;
+        overflow-y: auto;
+        display: none; /* Este estilo se cambiará dinámicamente con JavaScript */
+        top: 100%; /* Asegura que aparezca justo debajo del input */
+        left: 15px; /* Ajustar según el padding del contenedor padre */
+        right: 15px;
+    }
+
+    .opcion-tarea {
+        padding: 8px 10px;
+        cursor: pointer;
+    }
+
+    .opcion-tarea:hover {
+        background-color: #f8f8f8;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    input[type="text"], input[type="number"] {
+        width: 100%;
+        box-sizing: border-box; /* Esto asegura que el padding no afecte el ancho total */
+        padding: 8px;
+        margin-bottom: 10px; /* Añade un espacio entre los campos de entrada */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="text"]:focus, input[type="number"]:focus {
+        border-color: #66afe9;
+        outline: none;
+    }
+    
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9; /* Light gray color */
+    }
+    
+    .table-striped tbody tr:nth-of-type(even) {
+        background-color: #ffffff; /* White color */
+    }
+    
+
+
+
+.lugar-card-body{
+
+    overflow: visible;
+
+}
+.opcion-tarea-blanco {
+    background-color: #FFFFFF; /* Blanco */
+}
+
+.opcion-tarea-gris {
+    background-color: #F0F0F0; /* Gris claro */
+}
+.swal-button--confirm {
+    float: left; /* Alinea el botón "Ir al lugar" a la izquierda */
+    margin-right: auto; /* Espacio entre botones */
+}
+
+.swal-button--cancel {
+    float: none; /* Asegura que el botón "Cerrar" esté centrado */
+    margin: auto; /* Centra el botón horizontalmente */
+    display: block;
+}
+
+.swal-footer {
+    text-align: center; /* Centra los botones en el footer del modal */
+}
+
+.swal-footer {
+    display: flex;  /* Utiliza flexbox para controlar la disposición de los botones */
+    align-items: center; /* Alinea los botones verticalmente al centro */
+    justify-content: center; /* Alinea los botones horizontalmente al centro */
+    gap: 10px; /* Añade espacio entre los botones */
+}
+
+.swal-button {
+    flex: 1; /* Permite que ambos botones crezcan igualmente y ocupen el espacio disponible */
+    min-width: 100px; /* Asegúrate de que los botones tengan un mínimo de anchura */
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 3s forwards; /* Ajusta la duración según prefieras */
+}
+
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
