@@ -15,10 +15,9 @@
         <div class="news-feed">
             <div class="news-image" style="background-image: url({{ asset('img/login-bg/login-bg-11.jpg') }})"></div>
             <div class="news-caption">
-                <h4 class="caption-title"><b>Color</b> Admin App</h4>
+                <h4 class="caption-title"><b>Bien</b>venido</h4>
                 <p>
-                    Download the Color Admin app for iPhone®, iPad®, and Android™. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit.
+                    Descubre MarujaLimón: tu aliado digital para gestionar el voluntariado de forma eficiente. Conecta organizaciones y voluntarios, simplifica la coordinación de actividades y potencia tu impacto social. Únete ahora y marca la diferencia.
                 </p>
             </div>
         </div>
@@ -33,7 +32,7 @@
                         <span class="logo"></span>
                         <b>Maruja</b> Limon
                     </div>
-                    <small>Bootstrap 5 Responsive Admin Template</small>
+
                 </div>
                 <div class="icon">
                     <i class="fa fa-sign-in-alt"></i>
@@ -88,7 +87,6 @@
                     <hr class="bg-gray-600 opacity-2" />
 
                     <div class="text-gray-600 text-center text-gray-500-darker mb-0">
-                        &copy; Color Admin Todos los derechos reservados 2023
                     </div>
                 </form>
 
