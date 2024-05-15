@@ -140,10 +140,13 @@
     <script>
     document.getElementById("toggleViewButton").addEventListener("click", function() {
         var button = document.getElementById("toggleViewButton");
+        var pagination = document.getElementById("paginationControls");
         if (button.innerHTML === "Vista administración") {
             button.innerHTML = "Vista dinámica";
+            pagination.style.display = 'none'; // Oculta la paginación
         } else {
             button.innerHTML = "Vista administración";
+            pagination.style.display = 'block'; // Muestra la paginación
         }
     });
 </script>
@@ -272,9 +275,5 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 </script>
-
-
-
-
 
 </x-layout>
