@@ -4,7 +4,7 @@
     </div>
     <div class="button-container d-flex justify-content-end align-items-center">
         <a href="#modal-dialog" class="btn btn-success" data-bs-toggle="modal" style="display: none;" id="demoButton">Añadir horas</a>
-        <button id="toggleViewButton" class="btn btn-danger">Vista administración</button>
+        <button id="toggleViewButton" class="btn btn-info">Vista administración</button>
     </div>
 </div>
 
@@ -156,21 +156,34 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var toggleButton = document.getElementById('toggleViewButton');
+        var demoButton = document.getElementById('demoButton'); // Referencia al botón "Demo"
+        var botonTarea = document.getElementById('tareaButton');
+        var modeDisplay = document.getElementById('modeDisplay'); // Elemento que muestra el modo actual
+        var paginationControls = document.getElementById('pagination'); // Referencia a los controles de paginación
 
-        // Assume that we start in the card view
+        // Asumimos que empezamos en la vista de tarjetas
         var isCardView = true;
 
         toggleButton.addEventListener('click', function() {
-            // Toggles a class on the body (or other logic you may have) to change the view
+            // Cambia una clase en el cuerpo (u otra lógica que puedas tener) para cambiar la vista
             document.body.classList.toggle('cards-view');
 
-            // Toggle the state
+            // Alterna la visibilidad de los controles de paginación
+            paginationControls.style.display = isCardView ? 'none' : 'flex';
+
+            // Actualiza el texto del modo actual basado en la vista
+            modeDisplay.textContent = isCardView ? 'Vista dinámica' : 'Voluntarios';
+
+            // Alterna el estado
             isCardView = !isCardView;
 
-            // Based on the view, show or hide forms
+            // Alterna la visibilidad de otros botones basados en la vista
+            demoButton.style.display = isCardView ? 'none' : 'block'; // Asegura que el botón solo aparezca en la vista de tabla
+            botonTarea.style.display = isCardView ? 'none' : 'block';
         });
     });
 </script>
+
 <script>
     let table = $('#data-table-default').DataTable({
         responsive: true,
