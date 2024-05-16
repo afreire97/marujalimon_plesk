@@ -34,9 +34,7 @@
                     </div>
 
                 </div>
-                <div class="icon">
-                    <i class="fa fa-sign-in-alt"></i>
-                </div>
+
             </div>
             <!-- END login-header -->
 

@@ -20,21 +20,14 @@ class DatabaseSeeder extends Seeder
 
         // Crear un usuario administrador
         User::factory()->create([
-            'name' => 'PEPE',
-            'email' => 'pepe@mail.com',
+            'name' => 'Admin',
+            'email' => 'admin@mail.com',
             'email_verified_at' => now(),
             'password' => bcrypt('password'),
             'is_admin' => true,
         ]);
 
         // Crear un usuario voluntario
-        User::factory()->create([
-            'name' => 'Jose',
-            'email' => 'jose@mail.com',
-            'email_verified_at' => now(),
-            'password' => bcrypt('password'),
-            'is_voluntario' => true,
-        ]);
 
 
     }
