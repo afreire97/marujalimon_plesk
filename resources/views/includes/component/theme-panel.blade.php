@@ -2,7 +2,7 @@
 <div class="theme-panel">
 	<a href="javascript:;" data-toggle="theme-panel-expand" class="theme-collapse-btn"><i class="fa fa-cog"></i></a>
 	<div class="theme-panel-content" data-scrollbar="true" data-height="100%">
-		<h5>App Settings</h5>
+		<h5>Ajustes de la app</h5>
 
 		<!-- BEGIN theme-list -->
 		<div class="theme-list">
@@ -25,10 +25,10 @@
 
 		<div class="row mt-10px">
 			<div class="col-8 control-label text-dark fw-bold">
-				<div>Dark Mode <span class="badge bg-primary ms-1 py-2px position-relative" style="top: -1px;">NEW</span></div>
+				<div>Modo oscuro <span class="badge bg-primary ms-1 py-2px position-relative" style="top: -1px;">NEW</span></div>
 				<div class="lh-14">
 					<small class="text-dark opacity-50">
-						Adjust the appearance to reduce glare and give your eyes a break.
+                        Ajusta la apariencia para reducir el brillo y darle un descanso a tus ojos.
 					</small>
 				</div>
 			</div>
