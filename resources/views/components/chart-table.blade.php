@@ -45,11 +45,31 @@
 <div id="cardView" class="row mt-0">
     <!-- Este contenedor inicialmente está vacío y se llenará dinámicamente mediante JavaScript -->
 </div>
-<div id="pagination" class="pagination-controls">
-    <button id="prevPage">Anterior</button>
-    <span id="pageInfo"></span>
-    <button id="nextPage">Siguiente</button>
+<!-- Improved Pagination Controls -->
+<div id="pagination" class="pagination-controls" style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+    <button id="prevPage" class="btn btn-outline-primary" style="margin-right: 10px;">&laquo; Anterior</button>
+    <span id="pageInfo" style="margin: 0 15px; color: #008080; font-weight: bold;"></span>
+    <button id="nextPage" class="btn btn-outline-primary" style="margin-left: 10px;">Siguiente &raquo;</button>
 </div>
+
+<style>
+    .pagination-controls button {
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .pagination-controls button:hover {
+        background-color: #008080;
+        color: white;
+    }
+
+    .pagination-controls span {
+        font-size: 18px;
+    }
+</style>
+
 
 
 
