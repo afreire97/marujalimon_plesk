@@ -1,6 +1,7 @@
 <!-- BEGIN theme-panel -->
 <div class="theme-panel">
-	<a href="javascript:;" data-toggle="theme-panel-expand" class="theme-collapse-btn"><i class="fa fa-cog"></i></a>
+	<a href="javascript:;" data-toggle="theme-panel-expand" class="theme-collapse-btn"><i
+        class="fa-solid fa-gear fa-spin-pulse"></i></a>
 	<div class="theme-panel-content" data-scrollbar="true" data-height="100%">
 		<h5>Ajustes de la app</h5>
 
@@ -47,5 +48,7 @@
 
 
 	</div>
+
+
 </div>
 <!-- END theme-panel -->
