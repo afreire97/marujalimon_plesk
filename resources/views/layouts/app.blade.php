@@ -43,7 +43,7 @@
         <a href="{{route('voluntarios.index')}}" class="navbar-brand">
             <span class="brand-logo"></span>
             <span class="brand-text">
-                MARUJALIMON
+                ASDEGAL
             </span>
         </a>
         <!-- end navbar-brand -->
@@ -117,7 +117,7 @@
             <div class="container d-sm-flex">
                 <span class="copyright d-block">&copy; 2024 Todos los derechos reservados</span>
                 <ul class="social-media-list mt-2 mt-sm-0 flex-1">
-                   
+
                 </ul>
             </div>
 

@@ -17,7 +17,7 @@
             <div class="news-caption">
                 <h4 class="caption-title"><b>Bien</b>venido</h4>
                 <p>
-                    Descubre MarujaLimón: tu aliado digital para gestionar el voluntariado de forma eficiente. Conecta organizaciones y voluntarios, simplifica la coordinación de actividades y potencia tu impacto social. Únete ahora y marca la diferencia.
+                    Descubre Asdegal: tu aliado digital para gestionar el voluntariado de forma eficiente. Conecta organizaciones y voluntarios, simplifica la coordinación de actividades y potencia tu impacto social. Únete ahora y marca la diferencia.
                 </p>
             </div>
         </div>
@@ -30,7 +30,7 @@
                 <div class="brand">
                     <div class="d-flex align-items-center">
                         <span class="logo"></span>
-                        <b>Maruja</b> Limon
+                        <b>AS</b> DEGAL
                     </div>
 
                 </div>
